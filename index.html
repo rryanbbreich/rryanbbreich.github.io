@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ryan Breich - Robotics Engineering student at UWE Bristol. Embedded systems, machine vision and robotics projects.">
     <title>Ryan Breich</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,102 +12,106 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    
-<header class="site-header">
-    <nav class="nav">
-        <a href="#top" class="nav-logo">R<span>B</span></a>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+
+    <header class="site-header">
+        <nav class="nav">
+            <a href="#top" class="nav-logo">R<span>B</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
 
-    <section id="top" class="hero">
-    <p class="hero-kicker">Hello world. I'm</p>
-    <h1>Ryan Breich</h1>
-    <p class="hero-role"><span id="typed">Robotics Engineer</span><span class="cursor">_</span></p>
-    <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View projects</a>
-        <a href="CV.pdf" class="btn">Résumé</a>
-    </div>
-    </section>
+        <section id="top" class="hero">
+            <p class="hero-kicker">Hello world. I'm</p>
+            <h1>Ryan Breich</h1>
+            <p class="hero-role"><span id="typed">Robotics Engineer</span><span class="cursor">_</span></p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View projects</a>
+                <a href="CV.pdf" class="btn" target="_blank" rel="noopener">Résumé</a>
+            </div>
+        </section>
 
-    <section id="about">
-    <h2>About me</h2>
-    <p>I’m a Robotics Engineering student at UWE Bristol, on track for a First. I mostly program robotic systems in Python, C and MATLAB, and I’m just as comfortable with hardware: writing STM32 firmware, soldering prototypes, and debugging with oscilloscopes or logic analysers.</p>
-    <p>I learn best by building. My latest project uses machine vision to identify electronic components from a photo and suggest a creative project you could build with them, giving beginners an easy way in. You can see it, and others, below.</p>
-    <p>Outside engineering, you can find me playing football, hiking, biking, reading or out with friends. I’m currently looking for graduate roles in robotics and related fields, from embedded systems to machine vision, and I’m always happy to talk about other opportunities.</p>
-    </section>
+        <section id="about">
+            <h2>About me</h2>
+            <p>I’m a Robotics Engineering student at UWE Bristol, on track for a First. I mostly program robotic systems in Python, C and MATLAB, and I’m just as comfortable with hardware: writing STM32 firmware, soldering prototypes, and debugging with oscilloscopes or logic analysers.</p>
+            <p>I learn best by building. My latest project uses machine vision to identify electronic components from a photo and suggest a creative project you could build with them, giving beginners an easy way in. You can see it, and others, below.</p>
+            <p>Outside engineering, you can find me playing football, hiking, biking, reading or out with friends. I’m currently looking for graduate roles in robotics and related fields, from embedded systems to machine vision, and I’m always happy to talk about other opportunities.</p>
+        </section>
 
-    <section id="projects">
-    <h2>Projects</h2>
+        <section id="projects">
+            <h2>Projects</h2>
 
-    <article class="project">
-        <img src="images/rboticsdepth.jpg" alt="RBoticsDepth app showing a generated project from a photo of electronic components">
-        <p class="project-tag">Full-Stack / Machine Vision</p>
-        <h3>RBoticsDepth: AI Component Scanner</h3>
-        <p>A cross-platform app that identifies electronic components from a photo and generates a buildable project around them, with guided theory and Git setup for beginners.</p>
-        <p>Users photograph their parts and a vision model identifies each component, sorting them into a personal Component Locker and generating a project tailored to what they already own. A FastAPI backend handles image analysis, while Supabase provides authentication and a Postgres database with row-level security, serving both a web dashboard and a mobile app. Engineering challenges included server-side rate limiting to control API costs, and fixing a race condition where fast double-taps triggered duplicate scans, solved with a synchronous re-entrancy guard.</p>
-        <p class="tech">Tech: Python · FastAPI · Gemini · React Native (Expo) · Supabase · Streamlit</p>
-        <p class="status">In active development · Source available on request</p>
-    </article>
+            <article class="project">
+                <img src="images/rboticsdepth.jpg" alt="RBoticsDepth app showing a generated project from a photo of electronic components">
+                <p class="project-tag">Full-Stack / Machine Vision</p>
+                <h3>RBoticsDepth: AI Component Scanner</h3>
+                <p>A cross-platform app that identifies electronic components from a photo and generates a buildable project around them, with guided theory and Git setup for beginners.</p>
+                <p>Users photograph their parts and a vision model identifies each component, sorting them into a personal Component Locker and generating a project tailored to what they already own. A FastAPI backend handles image analysis, while Supabase provides authentication and a Postgres database with row-level security, serving both a web dashboard and a mobile app. Engineering challenges included server-side rate limiting to control API costs, and fixing a race condition where fast double-taps triggered duplicate scans, solved with a synchronous re-entrancy guard.</p>
+                <p class="tech">Tech: Python · FastAPI · Gemini · React Native (Expo) · Supabase · Streamlit</p>
+                <p class="status">In active development · Source available on request</p>
+            </article>
 
-    <article class="project">
-        <img src="images/rover.jpg" alt="3D-printed autonomous rover with Perseverance-inspired suspension">
-        <p class="project-tag">Robotics / Embedded</p>
-        <h3>Autonomous Rover</h3>
-        <p>A personal project: an autonomous rover with a 3D-printed chassis and suspension inspired by NASA's Perseverance rover.</p>
-        <p>Ultrasonic sensors integrated with an Arduino feed C code for autonomous obstacle detection and avoidance. Motor-driver wiring faults were traced and resolved through systematic fault-finding and testing.</p>
-        <p class="tech">Tech: C · Arduino · Ultrasonic sensors · Fusion 360 · 3D printing</p>
-        <p class="status">Personal project</p>
-    </article>
+            <article class="project">
+                <img src="images/rover.jpg" alt="3D-printed autonomous rover with Perseverance-inspired suspension">
+                <p class="project-tag">Robotics / Embedded</p>
+                <h3>Autonomous Rover</h3>
+                <p>A personal project: an autonomous rover with a 3D-printed chassis and suspension inspired by NASA's Perseverance rover.</p>
+                <p>Ultrasonic sensors integrated with an Arduino feed C code for autonomous obstacle detection and avoidance. Motor-driver wiring faults were traced and resolved through systematic fault-finding and testing.</p>
+                <p class="tech">Tech: C · Arduino · Ultrasonic sensors · Fusion 360 · 3D printing</p>
+                <p class="status">Personal project</p>
+            </article>
 
-    <article class="project">
-        <img src="images/micromouse.jpg" alt="STM32-based micromouse robot">
-        <p class="project-tag">Embedded Systems</p>
-        <h3>STM32 Micromouse</h3>
-        <p>A maze-navigating robot built on an STM32 microcontroller, programmed in embedded C.</p>
-        <p>Sensors and motor control were integrated through STM32 peripherals for autonomous maze navigation, with the team troubleshooting hardware and software issues to improve the robot's behaviour.</p>
-        <p class="tech">Tech: C · STM32 · Sensors · Motor control</p>
-        <p class="status">University group project</p>
-    </article>
+            <article class="project">
+                <img src="images/micromouse.jpg" alt="STM32-based micromouse robot">
+                <p class="project-tag">Embedded Systems</p>
+                <h3>STM32 Micromouse</h3>
+                <p>A maze-navigating robot built on an STM32 microcontroller, programmed in embedded C.</p>
+                <p>Sensors and motor control were integrated through STM32 peripherals for autonomous maze navigation, with the team troubleshooting hardware and software issues to improve the robot's behaviour.</p>
+                <p class="tech">Tech: C · STM32 · Sensors · Motor control</p>
+                <p class="status">University group project</p>
+            </article>
 
-    <article class="project">
-        <img src="images/path-integration.jpg" alt="Diagram of the planned wheeled robot and ring attractor model">
-        <p class="project-tag">Bio-Inspired Robotics</p>
-        <h3>Sim-to-Real Path Integration</h3>
-        <p>Investigating how a ring-attractor neural model of path integration, inspired by how mammals track their position, holds up when moved from simulation onto a physical wheeled robot.</p>
-        <p>Most research in this area stays in simulation. This final year project builds a vision-based wheeled robot to measure how real-world sensor and actuation noise degrade drift correction compared with simulated noise, benchmarked against conventional approaches such as Kalman filtering.</p>
-        <p class="tech">Tech: ESP32 · Camera · <!-- add stack once decided --></p>
-        <p class="status">Final year project · In progress</p>
-    </article>
+            <article class="project">
+                <img src="images/path-integration.jpg" alt="Diagram of the planned wheeled robot and ring attractor model">
+                <p class="project-tag">Bio-Inspired Robotics</p>
+                <h3>Sim-to-Real Path Integration</h3>
+                <p>Investigating how a ring-attractor neural model of path integration, inspired by how mammals track their position, holds up when moved from simulation onto a physical wheeled robot.</p>
+                <p>Most research in this area stays in simulation. This final year project builds a vision-based wheeled robot to measure how real-world sensor and actuation noise degrade drift correction compared with simulated noise, benchmarked against conventional approaches such as Kalman filtering.</p>
+                <p class="tech">Tech: ESP32 · Camera <!-- add the rest of the stack once decided --></p>
+                <p class="status">Final year project · In progress</p>
+            </article>
 
-    <article class="project">
-        <img src="images/robot-arm.jpg" alt="5-DOF robotic arm controlled by an SSC-32U servo controller">
-        <p class="project-tag">Robotics / Project Management</p>
-        <h3>5-DOF Robotic Arm for Sample Swabbing</h3>
-        <p>A multidisciplinary team project developing a 5-DOF robotic arm to automate swabbing and sample collection for petri dishes.</p>
-        <p>As the team's only robotics student, I lead project management and the business case, including the Gantt chart, risk register and planning, and program the arm in Python through an SSC-32U servo controller.</p>
-        <p class="tech">Tech: Python · SSC-32U · MS Project · Git</p>
-        <p class="status">Group design project · In progress</p>
-    </article>
-</section>
+            <article class="project">
+                <img src="images/robot-arm.jpg" alt="5-DOF robotic arm controlled by an SSC-32U servo controller">
+                <p class="project-tag">Robotics / Project Management</p>
+                <h3>5-DOF Robotic Arm for Sample Swabbing</h3>
+                <p>A multidisciplinary team project developing a 5-DOF robotic arm to automate swabbing and sample collection for petri dishes.</p>
+                <p>As the team's only robotics student, I helped coordinate project management and the business case, including the Gantt chart, risk register and planning, and program the arm in Python through an SSC-32U servo controller.</p>
+                <p class="tech">Tech: Python · SSC-32U · MS Project · Git</p>
+                <p class="status">Group design project · In progress</p>
+            </article>
+        </section>
 
-    <section id="contact">
-    <h2>Contact</h2>
-    <p><a href="mailto:breichryan4@gmail.com">Email: breichryan4@gmail.com</a></p>
-    <p><a href="https://www.linkedin.com/in/ryanbreich" target="_blank">LinkedIn: www.linkedin.com/in/ryanbreich</a></p>
-    </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:breichryan4@gmail.com">breichryan4@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/ryanbreich" target="_blank" rel="noopener">linkedin.com/in/ryanbreich</a></p>
+            <p>GitHub: <a href="https://github.com/rryanbbreich" target="_blank" rel="noopener">github.com/rryanbbreich</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/rboticsdepth" target="_blank" rel="noopener">@rboticsdepth</a></p>
+        </section>
 
     </main>
 
     <footer>
-    <p>&copy; 2026 Ryan Breich</p>
+        <p>&copy; 2026 Ryan Breich</p>
     </footer>
+
 </body>
 </html>
