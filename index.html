@@ -23,8 +23,46 @@
 
     <section id="projects">
     <h2>Projects</h2>
-    <p1>Project 1: RBoticsDepth: AI component Scanner</p1>
-    </section>
+
+    <article class="project">
+        <img src="images/rboticsdepth.jpg" alt="RBoticsDepth app showing a generated project from a photo of electronic components">
+        <p class="project-tag">Full-Stack / Machine Vision</p>
+        <h3>RBoticsDepth: AI Component Scanner</h3>
+        <p>A cross-platform app that identifies electronic components from a photo and generates a buildable project around them, with guided theory and Git setup for beginners.</p>
+        <p>Users photograph their parts and a vision model identifies each component, sorting them into a personal Component Locker and generating a project tailored to what they already own. A FastAPI backend handles image analysis, while Supabase provides authentication and a Postgres database with row-level security, serving both a web dashboard and a mobile app. Engineering challenges included server-side rate limiting to control API costs, and fixing a race condition where fast double-taps triggered duplicate scans, solved with a synchronous re-entrancy guard.</p>
+        <p class="tech">Tech: Python · FastAPI · Gemini · React Native (Expo) · Supabase · Streamlit</p>
+        <p class="status">In active development · Source available on request</p>
+    </article>
+
+    <article class="project">
+        <img src="images/rover.jpg" alt="Autonomous rover built on an STM32 microcontroller">
+        <p class="project-tag">Embedded Systems</p>
+        <h3>Autonomous Rover</h3>
+        <p>An autonomous rover programmed in embedded C on an STM32 ARM microcontroller. <!-- Add: what it does autonomously --></p>
+        <p><!-- Add: sensors used, peripherals (timers, PWM, ADC, UART, interrupts), the hardest bug and how you found it, where the Arduino fitted in --></p>
+        <p class="tech">Tech: C · STM32 · Arduino <!-- · sensors --></p>
+    </article>
+
+    <article class="project">
+        <img src="images/path-integration.jpg" alt="Diagram of the planned wheeled robot and ring attractor model">
+        <p class="project-tag">Bio-Inspired Robotics</p>
+        <h3>Sim-to-Real Path Integration</h3>
+        <p>Investigating how a ring-attractor neural model of path integration, inspired by how mammals track their position, holds up when moved from simulation onto a physical wheeled robot.</p>
+        <p>Most research in this area stays in simulation. This final year project builds a vision-based wheeled robot to measure how real-world sensor and actuation noise degrade drift correction compared with simulated noise, benchmarked against conventional approaches such as Kalman filtering.</p>
+        <p class="tech">Tech: ESP32 · Camera · <!-- add stack once decided --></p>
+        <p class="status">Final year project · In progress</p>
+    </article>
+
+    <article class="project">
+        <img src="images/robot-arm.jpg" alt="5-DOF robotic arm controlled by an SSC-32U servo controller">
+        <p class="project-tag">Robotics / Project Management</p>
+        <h3>5-DOF Robotic Arm for Sample Swabbing</h3>
+        <p>A multidisciplinary team project developing a 5-DOF robotic arm to automate swabbing and sample collection for petri dishes.</p>
+        <p>As the team's only robotics student, I lead project management and the business case, including the Gantt chart, risk register and planning, and program the arm in Python through an SSC-32U servo controller.</p>
+        <p class="tech">Tech: Python · SSC-32U · MS Project · Git</p>
+        <p class="status">Group design project · In progress</p>
+    </article>
+</section>
 
     <section id="contact">
     <h2>Contact</h2>
