@@ -35,7 +35,7 @@
         <a href="CV.pdf" class="btn">Résumé</a>
     </div>
     </section>
-    
+
     <section id="about">
     <h2>About me</h2>
     <p>I’m a Robotics Engineering student at UWE Bristol, on track for a First. I mostly program robotic systems in Python, C and MATLAB, and I’m just as comfortable with hardware: writing STM32 firmware, soldering prototypes, and debugging with oscilloscopes or logic analysers.</p>
@@ -57,12 +57,23 @@
     </article>
 
     <article class="project">
-        <img src="images/rover.jpg" alt="Autonomous rover built on an STM32 microcontroller">
-        <p class="project-tag">Embedded Systems</p>
+        <img src="images/rover.jpg" alt="3D-printed autonomous rover with Perseverance-inspired suspension">
+        <p class="project-tag">Robotics / Embedded</p>
         <h3>Autonomous Rover</h3>
-        <p>An autonomous rover programmed in embedded C on an STM32 ARM microcontroller. <!-- Add: what it does autonomously --></p>
-        <p><!-- Add: sensors used, peripherals (timers, PWM, ADC, UART, interrupts), the hardest bug and how you found it, where the Arduino fitted in --></p>
-        <p class="tech">Tech: C · STM32 · Arduino <!-- · sensors --></p>
+        <p>A personal project: an autonomous rover with a 3D-printed chassis and suspension inspired by NASA's Perseverance rover.</p>
+        <p>Ultrasonic sensors integrated with an Arduino feed C code for autonomous obstacle detection and avoidance. Motor-driver wiring faults were traced and resolved through systematic fault-finding and testing.</p>
+        <p class="tech">Tech: C · Arduino · Ultrasonic sensors · Fusion 360 · 3D printing</p>
+        <p class="status">Personal project</p>
+    </article>
+
+    <article class="project">
+        <img src="images/micromouse.jpg" alt="STM32-based micromouse robot">
+        <p class="project-tag">Embedded Systems</p>
+        <h3>STM32 Micromouse</h3>
+        <p>A maze-navigating robot built on an STM32 microcontroller, programmed in embedded C.</p>
+        <p>Sensors and motor control were integrated through STM32 peripherals for autonomous maze navigation, with the team troubleshooting hardware and software issues to improve the robot's behaviour.</p>
+        <p class="tech">Tech: C · STM32 · Sensors · Motor control</p>
+        <p class="status">University group project</p>
     </article>
 
     <article class="project">
